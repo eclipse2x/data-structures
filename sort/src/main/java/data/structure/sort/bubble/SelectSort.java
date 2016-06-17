@@ -16,10 +16,8 @@ public class SelectSort extends AbstractArrayBase {
 		// 从左开始，对比最小的数，放在左边
 		for (int outer=0; outer < size; outer++) {
 			int point = outer;
-			int smallest = datas[point];
 			for (int inner=outer + 1; inner<size; inner ++) {
-				if (datas[inner] < smallest) {
-					smallest = datas[inner];
+				if (datas[inner] < datas[point]) {
 					point = inner;
 				}
 			}
