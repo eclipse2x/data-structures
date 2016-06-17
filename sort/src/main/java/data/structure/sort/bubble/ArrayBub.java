@@ -1,7 +1,7 @@
 package data.structure.sort.bubble;
 
 /**
- * 冒泡排序, 比较次数为 n^2, 交换次数为 n^2
+ * 冒泡排序, 比较复杂度为O(n^2), 交换复杂度为 O(n^2)
  * @author eclipse
  *
  */
