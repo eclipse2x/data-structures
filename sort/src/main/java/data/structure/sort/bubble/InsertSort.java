@@ -16,16 +16,14 @@ public class InsertSort extends AbstractArrayBase {
 	@Override
 	public void sort() {
 		for (int outer = 1; outer < size; outer++) {
-			for (int i = 0; i < outer; i++) {
-				if (datas[i] > datas[outer]) {
-					int toMove = datas[outer];
-					for (int j = outer; j > i; j--) {
-						datas[j] = datas[j - 1];
-					}
-					datas[i] = toMove;
-					break;
-				}
+			int temp = datas[outer];
+			int inner = outer;
+			// 优化算法，从右算起就够了
+			while (inner > 0 && datas[inner - 1] > temp) {
+				datas[inner] = datas[inner - 1];
+				inner --;
 			}
+			datas[inner] = temp;
 		}
 	}
 }
