@@ -1,4 +1,4 @@
-package data.structure.sort.bubble;
+package data.structure.sort.base;
 
 /**
  * 
@@ -7,7 +7,7 @@ package data.structure.sort.bubble;
  * @author eclipse
  *
  */
-public class InsertSort extends AbstractArrayBase {
+public class InsertSort extends AbstractSortBase {
 
 	public InsertSort(int maxCapicity) {
 		super(maxCapicity);

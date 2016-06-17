@@ -1,9 +1,9 @@
-package data.structure.sort;
+package data.structure.sort.base;
 
-import data.structure.sort.bubble.AbstractArrayBase;
-import data.structure.sort.bubble.ArrayBub;
-import data.structure.sort.bubble.InsertSort;
-import data.structure.sort.bubble.SelectSort;
+import data.structure.sort.base.AbstractSortBase;
+import data.structure.sort.base.BubSort;
+import data.structure.sort.base.InsertSort;
+import data.structure.sort.base.SelectSort;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 
@@ -13,7 +13,7 @@ public class SortTest extends TestCase {
 	 * 测试冒泡排序
 	 */
 	public void testBubSort() {
-		ArrayBub bub = new ArrayBub(30);
+		BubSort bub = new BubSort(30);
 		doCompare(bub);
 	}
 	
@@ -33,7 +33,7 @@ public class SortTest extends TestCase {
 		doCompare(sort);
 	}
 	
-	private void doCompare(AbstractArrayBase target) {
+	private void doCompare(AbstractSortBase target) {
 		target.insert(10);
 		target.insert(30);
 		target.insert(20);

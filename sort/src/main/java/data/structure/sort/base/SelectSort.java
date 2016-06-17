@@ -1,11 +1,11 @@
-package data.structure.sort.bubble;
+package data.structure.sort.base;
 
 /**
  * 选择排序, 比较复杂度为O(n^2), 交换复杂度为O(n)
  * @author eclipse
  *
  */
-public class SelectSort extends AbstractArrayBase {
+public class SelectSort extends AbstractSortBase {
 
 	public SelectSort(int maxCapicity) {
 		super(maxCapicity);

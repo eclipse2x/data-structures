@@ -1,4 +1,4 @@
-package data.structure.sort.bubble;
+package data.structure.sort.base;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -7,14 +7,14 @@ import org.apache.commons.lang3.StringUtils;
  * 
  * @author eclipse
  */
-public abstract class AbstractArrayBase {
+public abstract class AbstractSortBase {
 	// 数据
 	protected int[] datas;
 
 	// 大小
 	protected int size;
 
-	public AbstractArrayBase(int maxCapicity) {
+	public AbstractSortBase(int maxCapicity) {
 		datas = new int[maxCapicity];
 		size = 0;
 	}
