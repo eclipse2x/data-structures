@@ -1,40 +1,20 @@
 package data.structure.sort.bubble;
 
-import org.apache.commons.lang3.StringUtils;
-
 /**
- * 冒泡排序
- * @author Administrator
+ * 冒泡排序, 比较次数为 n^2, 交换次数为 n^2
+ * @author eclipse
  *
  */
-public class ArrayBub {
-	// 数据
-	private int[] datas;
-	
-	// 大小
-	private int size;
+public class ArrayBub extends AbstractArrayBase {
 	
 	public ArrayBub(int maxCapicity) {
-		datas = new int[maxCapicity];
-		size = 0;
+		super(maxCapicity);
 	}
-	
-	public void insert(int data) {
-		if (size >= datas.length) {
-			throw new RuntimeException("超过大小，不能插入");
-		}
-		
-		datas[size++] = data;
-	}
-	
+
 	@Override
-	public String toString() {
-		return StringUtils.join(datas, ',', 0, size);
-	}
-	
 	public void sort() {
 		// 分段，从大排到小
-		for (int point=size; point>0; point--) {
+		for (int point=size; point>1; point--) {
 			bubLargest(datas, point);
 		}
 	}
@@ -46,12 +26,5 @@ public class ArrayBub {
 				swap(target, i, i+1);
 			}
 		}
-	}
-	
-	// 交换i和j位的数据
-	private void swap(int[] target, int i, int j) {
-		int source = target[i];
-		target[i] = target[j];
-		target[j] = source;
 	}
 }
