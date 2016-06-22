@@ -33,6 +33,11 @@ public class SortTest extends TestCase {
 		doCompare(sort);
 	}
 	
+	public void testQuickSort() {
+		QuickSort sort = new QuickSort(30);
+		doCompare(sort);
+	}
+	
 	private void doCompare(AbstractSortBase target) {
 		target.insert(10);
 		target.insert(30);
